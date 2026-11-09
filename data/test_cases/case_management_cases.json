@@ -1,0 +1,605 @@
+{
+  "description": "Nyaya Saathi Case Management & Guided Intake Test Suite (Blueprint Steps 12 & 13)",
+  "total_test_cases": 20,
+  "test_cases": [
+    {
+      "test_id": "TC-01",
+      "name": "Missing Product E-Commerce with Unanswered Phone Calls (Blueprint Part D Scenario)",
+      "dispute_type": "MISSING_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I got missing product from e-commerce.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE",
+          "expected_pending_question_topic": "seller_contact"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I contacted seller, but they are not receiving calls.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "contact_method": "phone call",
+            "seller_response": "Seller is not receiving calls / no response"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "It was a mobile phone from Amazon worth Rs 15,000. I want a full refund.",
+          "expected_extracted_facts": {
+            "product_or_service": "mobile phone",
+            "seller_or_platform": "Amazon",
+            "purchase_amount": "₹15,000",
+            "desired_resolution": "Full refund of purchase amount"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-02",
+      "name": "Defective Television Screen Blank on Arrival",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I bought a TV from Flipkart for Rs 25,000, and the screen is completely blank and broken.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I contacted Flipkart customer care via email, and they refused to replace it.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "contact_method": "email",
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want a replacement with a new piece.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Replacement with non-defective product"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-03",
+      "name": "Air Conditioner Cooling Failure / Service Delay",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I purchased an air conditioner for Rs 32,000 from Croma. The cooling is completely dead.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I called customer care, but they promised a technician who never arrived.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller promised resolution but delayed"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want free repair under warranty.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Free repair under warranty"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-04",
+      "name": "Flight Ticket Cancellation Without Refund",
+      "dispute_type": "SERVICE_DEFICIENCY",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I booked a flight ticket for Rs 8,500. The airline cancelled the flight but did not refund.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I sent email to customer support, but they refused to refund.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want my full refund.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Full refund of purchase amount"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-05",
+      "name": "Wrong Product Delivered (Ordered Laptop, Got Detergent)",
+      "dispute_type": "WRONG_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I ordered a laptop from Amazon for Rs 45,000, but received detergent soap instead.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I called Amazon support and sent photos, but they refused assistance.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "contact_method": "phone call",
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want a full refund and compensation.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Refund and compensation for harassment/deficiency"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-06",
+      "name": "Broadband Internet Service Inactive for 3 Weeks",
+      "dispute_type": "SERVICE_DEFICIENCY",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "My broadband internet connection has been completely down for 3 weeks, cost was Rs 1,200.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I called customer support, but they are not answering calls.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller is not receiving calls / no response"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I bought it from JioMart. I want a full refund.",
+          "expected_extracted_facts": {
+            "seller_or_platform": "JioMart",
+            "desired_resolution": "Full refund of purchase amount"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-07",
+      "name": "Approved Refund Not Credited by Marketplace",
+      "dispute_type": "REFUND_NOT_RECEIVED",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "Flipkart approved my refund of Rs 4,999 on an order, but money is not received.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I contacted them on chat, but they are not answering anymore.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller is not receiving calls / no response"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "It was for a mobile phone. I want my refund credited immediately.",
+          "expected_extracted_facts": {
+            "product_or_service": "mobile phone",
+            "desired_resolution": "Full refund of purchase amount"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-08",
+      "name": "Food Delivery Missing Multiple Items",
+      "dispute_type": "MISSING_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I ordered dinner on Swiggy for Rs 650, but the food package was missing half the items.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I complained on customer care chat, but they refused assistance.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want a refund of the amount.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Full refund of purchase amount"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-09",
+      "name": "Hindi/Hinglish Intake - Smartphone Battery Failure",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "Hindi/Hinglish",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "Maine Amazon se ek mobile phone kharida tha Rs 12,000 ka, par uski battery chal nahi rahi.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Haan maine call kiya, unhone phone uthaya aur mana kar diya.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "Mujhe mera pura refund chahiye.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Full refund of purchase amount"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-10",
+      "name": "Washing Machine Drum Leaking Water",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I bought a washing machine from Croma for Rs 18,500. Water is leaking from the drum.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I emailed their support, but they refused to help.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "contact_method": "email",
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want a replacement.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Replacement with non-defective product"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-11",
+      "name": "User Fact Correction Workflow",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I bought a mobile phone from Meesho for Rs 8,000 and it stopped working.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I contacted them and they refused.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want a refund.",
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ],
+      "correction_test": {
+        "field": "purchase_amount",
+        "new_value": "₹9,500"
+      }
+    },
+    {
+      "test_id": "TC-12",
+      "name": "Missing Information with Explicit Unknown Answers",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I purchased a refrigerator online and it has a gas leak.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I contacted seller, but they are not receiving calls.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller is not receiving calls / no response"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "It was from Blinkit. I don't know the exact amount. I want a refund.",
+          "expected_extracted_facts": {
+            "seller_or_platform": "Blinkit",
+            "desired_resolution": "Full refund of purchase amount"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-13",
+      "name": "Mid-Intake Urgent Safety Escalation (Burn / Explosion)",
+      "dispute_type": "URGENT_SAFETY",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I ordered an electronics charger online from Amazon for Rs 500.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "The charger exploded into flames, severely burned my hands, and I am bleeding.",
+          "expected_scope": "URGENT_ESCALATION",
+          "expected_workflow_paused": true
+        }
+      ]
+    },
+    {
+      "test_id": "TC-14",
+      "name": "Outside Scope Rejection (Unpaid Salary Dispute)",
+      "dispute_type": "OUTSIDE_SCOPE",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "My boss has refused to pay my overtime salary for the past three months.",
+          "expected_scope": "OUTSIDE_SCOPE",
+          "expected_workflow_paused": true
+        }
+      ]
+    },
+    {
+      "test_id": "TC-15",
+      "name": "Vague Description Clarified into Valid Grievance",
+      "dispute_type": "CLARIFICATION_TO_DISPUTE",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I have an issue with an online company.",
+          "expected_scope": "NEEDS_CLARIFICATION",
+          "expected_workflow_paused": false
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I bought an air cooler from Flipkart for Rs 6,000 and it arrived broken.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-16",
+      "name": "Refrigerator Stopped Cooling / Spoiled Food Compensation",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I bought a refrigerator from Reliance Digital for Rs 22,000, and it stopped working after one week.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I called customer service, but they refused assistance.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want a refund and compensation for harassment.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Refund and compensation for harassment/deficiency"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-17",
+      "name": "Hindi/Hinglish E-Commerce Non-Delivery",
+      "dispute_type": "MISSING_PRODUCT",
+      "language": "Hindi/Hinglish",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "Mera Meesho se mangaaya hua samaan order deliver nahi hua.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Haan maine customer care me call kiya tha par unhone call nahi uthaya.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "seller_response": "Seller is not receiving calls / no response"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "Yeh ek mobile phone tha Rs 8,000 ka. Mujhe pura refund chahiye.",
+          "expected_extracted_facts": {
+            "product_or_service": "mobile phone",
+            "purchase_amount": "₹8,000",
+            "desired_resolution": "Full refund of purchase amount"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-18",
+      "name": "Multiple Evidence Items Mentioned in Statement",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I bought a laptop from Amazon for Rs 55,000 with tax invoice and payment screenshot, but display is flickering.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE",
+          "expected_evidence_items": ["Invoice / Bill", "Payment Proof"]
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I contacted them via email with photos, but they refused assistance.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "contact_method": "email",
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want a replacement.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Replacement with non-defective product"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-19",
+      "name": "Uncontacted Seller Workflow",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I purchased shoes from Myntra for Rs 2,500, and the sole was torn on arrival.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "No, I haven't contacted the seller yet.",
+          "expected_extracted_facts": {
+            "seller_contacted": false,
+            "seller_response": "Not yet contacted"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want a replacement with a new piece.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Replacement with non-defective product"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ]
+    },
+    {
+      "test_id": "TC-20",
+      "name": "End-to-End Complete Case Confirmation Lifecycle",
+      "dispute_type": "DEFECTIVE_PRODUCT",
+      "language": "English",
+      "turns": [
+        {
+          "turn": 1,
+          "user_message": "I purchased an air conditioner from Reliance Digital for Rs 28,000 and it does not blow cold air.",
+          "expected_scope": "LIKELY_CONSUMER_DISPUTE",
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 2,
+          "user_message": "Yes, I called them on phone, but they refused free repair.",
+          "expected_extracted_facts": {
+            "seller_contacted": true,
+            "contact_method": "phone call",
+            "seller_response": "Seller refused assistance"
+          },
+          "expected_case_status": "INTAKE"
+        },
+        {
+          "turn": 3,
+          "user_message": "I want free repair under warranty.",
+          "expected_extracted_facts": {
+            "desired_resolution": "Free repair under warranty"
+          },
+          "expected_case_status": "FACTS_REVIEW"
+        }
+      ],
+      "confirm_lifecycle": true
+    }
+  ]
+}

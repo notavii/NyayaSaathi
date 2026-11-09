@@ -1,0 +1,109 @@
+{
+  "document_id": "EJAGRITI_FILING_GUIDE",
+  "document_title": "e-Jagriti Consumer Commission Online Complaint Filing User Manual",
+  "original_filename": "eJagriti_User_Manual_Consumer_Filing.pdf",
+  "source_url": "https://e-jagriti.gov.in/",
+  "sha256": "9e666f13c725568493adc74879ed1bb1a2d53e5f56696d58253a8e996c0caf49",
+  "total_pdf_pages": 13,
+  "extracted_page_count": 13,
+  "page_range": [
+    1,
+    13
+  ],
+  "extraction_method": "PyMuPDF",
+  "empty_pages": [],
+  "low_text_pages": [],
+  "pages": [
+    {
+      "pdf_page_number": 1,
+      "printed_page_number": null,
+      "text": " \n \n \nHelp Documentation \n \nFor \n \nConsumer Complaint (CC) \nFiling \n \n \n \n \n \n \n National Informatics Centre ,  \nMinistry of Electronics & Information Technology,  \nGovernment of India \n(A-Block, CGO Complex, Lodhi Road, \nNew Delhi – 110003) \n \nMarch  2025 \n \n \n \n",
+      "character_count": 250,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 2,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \nStep 1: Navigate to the dashboard and select \"File New Case\" from the left menu. \n \n \nStep 2: Choose \"Consumer Complaint\" from the list of case types in the selection menu. \n \n \n \n                        e-Jagriti Help Document \n2/12 \n",
+      "character_count": 260,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 3,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \nStep 3: Upon selecting \"Consumer Complaint” from the given case types, \n3.1 : A list of required documents will be displayed. \n3.2 : Review the applicable fee structure. \n \n \n                        e-Jagriti Help Document \n3/12 \n",
+      "character_count": 255,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 4,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \nStep 4 \n4.1: In “Case Details” enter the amount paid for the service, claim amount, date of cause of action, \nstate, district, case category, and subcategory. \n4.2: Click \"Next\" to proceed. \n \n \n \n                        e-Jagriti Help Document \n4/12 \n",
+      "character_count": 277,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 5,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \nStep 5   \n5.1: Enter the Complainant details. Select if applicable: Senior Citizen, Widow, Differently Abled, or    \nSerious Ailments, and choose the address type (Present, Permanent, or Business).  \n5.2: Add the advocate from the list  \n5.3: Enter the Opposite Party details.  \n5.4: Click \"Next\" to proceed. \n \n \n \n \n                        e-Jagriti Help Document \n5/12 \n",
+      "character_count": 398,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 6,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \nStep 6:  \n6.1: Add an additional complainant , if any \n6.2: Add Proforma complainant , if any \n6.3 : Click \"Next\" to proceed. \n \n \n \n \n                        e-Jagriti Help Document \n6/12 \n",
+      "character_count": 215,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 7,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n6.4 : To add an additional complainant , enter the details i.e name , address etc.  \n6.5 : Add the advocate from the list  \n6.6 : To add  proforma complainant , enter the details i.e name , address etc. \n6.7 : Add the advocate pertaining to the proforma complainant. \n6.8 : Click \"Next\" to proceed. \n \n \n \n \n \n                        e-Jagriti Help Document \n7/12 \n",
+      "character_count": 388,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 8,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \nStep 7  \n7.1: Add an additional opposite party detail , if any \n7.2: Add Proforma opposite party , if any \n7.3: Click \"Next\" to proceed. \n \n \n \n                        e-Jagriti Help Document \n8/12 \n",
+      "character_count": 224,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 9,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \n7.4 : To add the Additional Opposite Party , enter the details  i.e name , address etc. \n7.5 : To add  Proforma Opposite Party, enter the details i.e name , address etc.  \n7.6 : Click \"Next\" to proceed. \n \n \n \n                        e-Jagriti Help Document \n9/12 \n",
+      "character_count": 290,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 10,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \nStep 8:  \n8.1: Upload the required documents i.e Index, Proforma, Synopsis, Memo of Parties, Notarized Affidavit \nand Vakalatnama. \n8.2: Upload Annexures (with appropriate title) or IA Application  \n8.3: Click \"Next\" to proceed. \n \n \n                        e-Jagriti Help Document \n10/12 \n",
+      "character_count": 315,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 11,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \n \n \nStep 9:  \n9.1: Select the commission name and tick the declaration checkbox.  \n9.2: Click the \"Preview\" button. \n \n \n                        e-Jagriti Help Document \n11/12 \n",
+      "character_count": 202,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 12,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \n \nStep 10: Review the details on the Preview page.  \n10.1 : Click the \"Edit\" button to correct the respective section’s information.  \n10.2 : Click \"Submit\" to complete the process. \n \n \nStep 11: Clicking the \"Final Submit\" button will trigger a pop-up asking, \"Are you sure you want to \nsubmit? You will not be able to edit the form after submission\". \n \n \n \n \n                        e-Jagriti Help Document \n12/12 \n",
+      "character_count": 441,
+      "extraction_status": "SUCCESS"
+    },
+    {
+      "pdf_page_number": 13,
+      "printed_page_number": null,
+      "text": "Consumer Complaint (CC) \nStep 12: Selecting \"Yes\" will generate a reference number and submit the case to the respective \ncommission. \n \n \n \n \nStep 13 : Upon clicking on “Print button” will generate a reference number, date of filing, \ncommission name etc. \n \n                        e-Jagriti Help Document \n13/12 \n",
+      "character_count": 314,
+      "extraction_status": "SUCCESS"
+    }
+  ]
+}

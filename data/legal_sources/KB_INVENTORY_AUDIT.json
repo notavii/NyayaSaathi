@@ -1,0 +1,158 @@
+{
+  "audit_metadata": {
+    "title": "Nyaya Saathi Legal Knowledge Base Inventory Audit",
+    "audit_type": "FINAL_RECONCILIATION_READ_ONLY",
+    "audit_timestamp": "2026-11-08T12:00:00+05:30",
+    "status": "VERIFIED_ACCURATE"
+  },
+  "reconciled_counts_summary": {
+    "canonical_legal_chunks_count": 206,
+    "embedding_records_count": 251,
+    "historical_reference_chunks_count": 74,
+    "active_unique_identifiers_count": 276,
+    "total_knowledge_base_unique_identifiers_count": 350,
+    "chromadb_total_records_count": 251,
+    "catalog_sources_count": 11
+  },
+  "canonical_chunks_breakdown": {
+    "total": 206,
+    "by_document_id": {
+      "CPA_2019": 154,
+      "CP_CDRC_RULES_2020": 17,
+      "CP_ECOMMERCE_AMENDMENT_2021": 1,
+      "CP_ECOMMERCE_AMENDMENT_2026": 2,
+      "CP_ECOMMERCE_CORRIGENDUM_2020": 1,
+      "CP_ECOMMERCE_RULES_2020": 8,
+      "CP_GENERAL_RULES_2020": 5,
+      "CP_JURISDICTION_RULES_2021": 5,
+      "EJAGRITI_FILING_GUIDE": 13
+    },
+    "by_document_type": {
+      "AMENDMENT_RULES": 3,
+      "CENTRAL_ACT": 154,
+      "CORRIGENDUM": 1,
+      "PROCEDURAL_GUIDE": 13,
+      "RULES": 35
+    },
+    "by_source_document": {
+      "A2019-35_Consumer_Protection_Act_2019.pdf": 154,
+      "CP_Ecommerce_Amendment_Rules_2021_GSR_328_E.pdf": 1,
+      "CP_Ecommerce_Amendment_Rules_2026_GSR_789_E.pdf": 2,
+      "CP_Ecommerce_Corrigendum_2020_GSR_468_E.pdf": 1,
+      "CP_Ecommerce_Rules_2020_GSR_462_E.pdf": 8,
+      "CP_Jurisdiction_Rules_2021_GSR_912_E.pdf": 5,
+      "Consumer_Commission_Rules_and_General_Rules_2020.pdf": 22,
+      "eJagriti_User_Manual_Consumer_Filing.pdf": 13
+    },
+    "by_applicability_status": {
+      "CURRENTLY_IN_FORCE": 204,
+      "FUTURE_EFFECTIVE": 2
+    },
+    "by_retrieval_eligible": {
+      "True": 206
+    }
+  },
+  "embedding_records_breakdown": {
+    "total": 251,
+    "unchunked_parent_chunks_count": 181,
+    "split_parent_chunks_count": 25,
+    "child_segments_count": 70,
+    "by_document_id": {
+      "CPA_2019": 180,
+      "CP_CDRC_RULES_2020": 24,
+      "CP_ECOMMERCE_AMENDMENT_2021": 2,
+      "CP_ECOMMERCE_AMENDMENT_2026": 6,
+      "CP_ECOMMERCE_CORRIGENDUM_2020": 2,
+      "CP_ECOMMERCE_RULES_2020": 13,
+      "CP_GENERAL_RULES_2020": 6,
+      "CP_JURISDICTION_RULES_2021": 5,
+      "EJAGRITI_FILING_GUIDE": 13
+    },
+    "by_document_type": {
+      "AMENDMENT_RULES": 8,
+      "CENTRAL_ACT": 180,
+      "CORRIGENDUM": 2,
+      "PROCEDURAL_GUIDE": 13,
+      "RULES": 48
+    },
+    "by_source_document": {
+      "A2019-35_Consumer_Protection_Act_2019.pdf": 180,
+      "CP_Ecommerce_Amendment_Rules_2021_GSR_328_E.pdf": 2,
+      "CP_Ecommerce_Amendment_Rules_2026_GSR_789_E.pdf": 6,
+      "CP_Ecommerce_Corrigendum_2020_GSR_468_E.pdf": 2,
+      "CP_Ecommerce_Rules_2020_GSR_462_E.pdf": 13,
+      "CP_Jurisdiction_Rules_2021_GSR_912_E.pdf": 5,
+      "Consumer_Commission_Rules_and_General_Rules_2020.pdf": 30,
+      "eJagriti_User_Manual_Consumer_Filing.pdf": 13
+    },
+    "by_retrieval_collection": {
+      "null": 251
+    },
+    "by_applicability_status": {
+      "CURRENTLY_IN_FORCE": 245,
+      "FUTURE_EFFECTIVE": 6
+    },
+    "by_retrieval_eligible": {
+      "True": 251
+    },
+    "by_is_child_segment": {
+      "False": 181,
+      "True": 70
+    }
+  },
+  "historical_reference_breakdown": {
+    "total": 74,
+    "by_document_id": {
+      "CONSUMER_HANDBOOK_2015": 74
+    },
+    "by_document_type": {
+      "HISTORICAL_EDUCATIONAL_REFERENCE": 74
+    },
+    "by_source_document": {
+      "Consumer Handbook (2015)": 74
+    },
+    "by_applicability_status": {
+      "HISTORICAL_REFERENCE": 74
+    },
+    "by_retrieval_eligible": {
+      "False": 74
+    },
+    "chroma_presence": false,
+    "bm25_presence": false
+  },
+  "chromadb_collections_breakdown": {
+    "collections": {
+      "nyaya_saathi_future_law": 6,
+      "nyaya_saathi_current_law": 232,
+      "nyaya_saathi_procedural_guidance": 13
+    },
+    "total_vectors": 251,
+    "segregation_integrity": {
+      "nyaya_saathi_current_law": {
+        "count": 232,
+        "description": "In-force statutory law (CPA 2019, 2020 Rules, Corrigendum, 2021 Amendment)",
+        "expected": 232,
+        "matches_expected": true
+      },
+      "nyaya_saathi_procedural_guidance": {
+        "count": 13,
+        "description": "Procedural guidance only (e-Jagriti Filing Guide)",
+        "expected": 13,
+        "matches_expected": true
+      },
+      "nyaya_saathi_future_law": {
+        "count": 6,
+        "description": "Future-effective statutory amendments (G.S.R. 789(E), effective 2027-01-01)",
+        "expected": 6,
+        "matches_expected": true
+      }
+    }
+  },
+  "discrepancy_reconciliation": {
+    "explanation_206_vs_251": "206 is the count of canonical parent chunks in legal_chunks.json. 25 of those parent chunks exceeded token thresholds and were segmented into 70 child segments. The 181 unchunked parents plus 70 child segments yield exactly 251 active embedding records in embedding_records.json and ChromaDB.",
+    "explanation_251_vs_276": "276 is the union of unique IDs in both files: 181 unchunked parent chunk IDs + 25 split parent chunk IDs (retained in legal_chunks.json) + 70 child segment IDs (in embedding_records.json) = 276 unique active identifiers.",
+    "explanation_276_vs_350": "Adding the 74 isolated historical reference chunks (from CONSUMER_HANDBOOK_2015.pdf, retrieval_eligible=False) to the 276 active identifiers gives exactly 350 total unique legal knowledge-base identifiers across the repository.",
+    "explanation_earlier_reporting_discrepancy": "An earlier narrative informally grouped chunks into '141 CPA 2019, 64 E-Commerce Rules, 1 Amendment'. That narrative conflated CDRC Rules (17), General Rules (5), Jurisdiction Rules (5), E-Commerce Rules (8), Corrigendum (1), and Amendments into a single 'E-Commerce / Rules' shorthand, while misattributing the CPA chunk count. The actual verified physical breakdown across legal_chunks.json is: CPA 2019: 154; CDRC Rules: 17; e-Jagriti Guide: 13; E-Commerce Rules 2020: 8; General Rules 2020: 5; Jurisdiction Rules 2021: 5; E-Commerce Amendment 2026: 2; E-Commerce Amendment 2021: 1; E-Commerce Corrigendum 2020: 1. Total = 206.",
+    "explanation_ejagriti_1_vs_13": "The '1 e-Jagriti guide' referred to 1 logical document entity in source_catalog.json, which extracts into exactly 13 canonical chunks in legal_chunks.json and 13 records in embedding_records.json."
+  }
+}

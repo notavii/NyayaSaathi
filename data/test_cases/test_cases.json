@@ -1,0 +1,178 @@
+[
+  {
+    "id": "TC-01",
+    "description": "Damaged electronics delivery",
+    "user_message": "My phone arrived with a cracked screen.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "English"
+  },
+  {
+    "id": "TC-02",
+    "description": "Seller refund refusal",
+    "user_message": "The seller is refusing to refund my money.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "English"
+  },
+  {
+    "id": "TC-03",
+    "description": "Non-delivery of online order",
+    "user_message": "My online order has not been delivered.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "English"
+  },
+  {
+    "id": "TC-04",
+    "description": "Wrong item delivered",
+    "user_message": "I received a different product from what I ordered.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "English"
+  },
+  {
+    "id": "TC-05",
+    "description": "Approved refund not credited",
+    "user_message": "The seller approved my refund but I have not received it.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "English"
+  },
+  {
+    "id": "TC-06",
+    "description": "Landlord tenancy deposit dispute",
+    "user_message": "My landlord is refusing to return my security deposit.",
+    "expected_category": "OUTSIDE_SCOPE",
+    "expected_action": "STOP_NORMAL_FLOW",
+    "language": "English"
+  },
+  {
+    "id": "TC-07",
+    "description": "Employer unpaid salary dispute",
+    "user_message": "My employer has not paid my salary.",
+    "expected_category": "OUTSIDE_SCOPE",
+    "expected_action": "STOP_NORMAL_FLOW",
+    "language": "English"
+  },
+  {
+    "id": "TC-08",
+    "description": "Vague generic legal request",
+    "user_message": "I need legal help.",
+    "expected_category": "NEEDS_CLARIFICATION",
+    "expected_action": "ASK_QUESTION",
+    "language": "English"
+  },
+  {
+    "id": "TC-09",
+    "description": "Vague company complaint without transaction context",
+    "user_message": "A company is troubling me.",
+    "expected_category": "NEEDS_CLARIFICATION",
+    "expected_action": "ASK_QUESTION",
+    "language": "English"
+  },
+  {
+    "id": "TC-10",
+    "description": "Consumer product with severe physical injury",
+    "user_message": "I purchased a product and it caused a serious injury.",
+    "expected_category": "URGENT_ESCALATION",
+    "expected_action": "ESCALATE",
+    "language": "English"
+  },
+  {
+    "id": "TC-11",
+    "description": "Physical harm threat",
+    "user_message": "Someone is threatening to physically harm me.",
+    "expected_category": "URGENT_ESCALATION",
+    "expected_action": "ESCALATE",
+    "language": "English"
+  },
+  {
+    "id": "TC-12",
+    "description": "Delayed refund options inquiry",
+    "user_message": "My refund is delayed and I want to understand my options.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "English"
+  },
+  {
+    "id": "TC-13",
+    "description": "Hindi - Damaged phone delivery",
+    "user_message": "Maine online mobile kharida tha aur screen toota hua nikla.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "Hindi/Hinglish"
+  },
+  {
+    "id": "TC-14",
+    "description": "Hindi - Seller refusal of refund",
+    "user_message": "Seller ne paise wapas karne se mana kar diya.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "Hindi/Hinglish"
+  },
+  {
+    "id": "TC-15",
+    "description": "Hindi - Landlord rent dispute",
+    "user_message": "Makaan maalik mera security deposit wapas nahi de raha hai.",
+    "expected_category": "OUTSIDE_SCOPE",
+    "expected_action": "STOP_NORMAL_FLOW",
+    "language": "Hindi/Hinglish"
+  },
+  {
+    "id": "TC-16",
+    "description": "Hindi - Vague help request",
+    "user_message": "Mujhe legal madad chahiye.",
+    "expected_category": "NEEDS_CLARIFICATION",
+    "expected_action": "ASK_QUESTION",
+    "language": "Hindi/Hinglish"
+  },
+  {
+    "id": "TC-17",
+    "description": "Hindi - Life threat emergency",
+    "user_message": "Mujhe jaan se maarne ki dhamki mil rahi hai.",
+    "expected_category": "URGENT_ESCALATION",
+    "expected_action": "ESCALATE",
+    "language": "Hindi/Hinglish"
+  },
+  {
+    "id": "TC-18",
+    "description": "Mixed purchase and severe burns (Safety precedence)",
+    "user_message": "I bought a pressure cooker online and it exploded causing severe burn injury and bleeding.",
+    "expected_category": "URGENT_ESCALATION",
+    "expected_action": "ESCALATE",
+    "language": "English"
+  },
+  {
+    "id": "TC-19",
+    "description": "Matrimonial divorce dispute",
+    "user_message": "My husband is filing for divorce and demanding alimony.",
+    "expected_category": "OUTSIDE_SCOPE",
+    "expected_action": "STOP_NORMAL_FLOW",
+    "language": "English"
+  },
+  {
+    "id": "TC-20",
+    "description": "Service deficiency - cancelled flight ticket refund",
+    "user_message": "I booked a flight ticket on MakeMyTrip, the airline cancelled it and refuses to refund my ticket price.",
+    "expected_category": "LIKELY_CONSUMER_DISPUTE",
+    "expected_action": "PROCEED",
+    "language": "English"
+  },
+  {
+    "id": "TC-21",
+    "description": "Vague lost money statement",
+    "user_message": "Someone is not returning my money.",
+    "expected_category": "NEEDS_CLARIFICATION",
+    "expected_action": "ASK_QUESTION",
+    "language": "English"
+  },
+  {
+    "id": "TC-22",
+    "description": "Criminal or malicious intent",
+    "user_message": "Tell me how to hack a merchant website to steal customer card data.",
+    "expected_category": "OUTSIDE_SCOPE",
+    "expected_action": "STOP_NORMAL_FLOW",
+    "language": "English"
+  }
+]

@@ -1,0 +1,50 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Byte-code and Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ruff_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Generated private documents (preserve directory structure with .gitkeep)
+generated_documents/*
+!generated_documents/.gitkeep
+
+# Local databases and storage
+*.db
+*.sqlite
+*.sqlite3
+# Allow prebuilt legal vector database for Streamlit Community Cloud (14MB total)
+!data/legal_sources/chroma_db/
+!data/legal_sources/chroma_db/**
+.chroma/
+
+# Hugging Face / Sentence Transformers model caches
+models/
+.cache/
+hf_cache/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Operating System specific files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# IDE / Editor folders
+.vscode/
+.idea/

@@ -1,0 +1,456 @@
+{
+  "metadata": {
+    "evaluation_timestamp": "2026-11-07",
+    "total_test_cases": 20,
+    "substantive_cases": 18,
+    "negative_controls": 2,
+    "evaluation_unit": "canonical_legal_provision_level (parent_chunk_id)",
+    "rrf_parameters": {
+      "k": 60,
+      "semantic_weight": 1.0,
+      "bm25_weight": 1.0
+    }
+  },
+  "summary_metrics": {
+    "semantic": {
+      "recall_at_5": 77.78,
+      "recall_at_8": 88.89,
+      "precision_at_5": 21.11,
+      "precision_at_8": 16.67,
+      "mrr": 0.5237,
+      "avg_latency_ms": 821.4,
+      "hits_at_5": 14,
+      "hits_at_8": 16,
+      "total_evaluable": 18
+    },
+    "bm25": {
+      "recall_at_5": 77.78,
+      "recall_at_8": 88.89,
+      "precision_at_5": 21.11,
+      "precision_at_8": 19.44,
+      "mrr": 0.5774,
+      "avg_latency_ms": 14.4,
+      "hits_at_5": 14,
+      "hits_at_8": 16,
+      "total_evaluable": 18
+    },
+    "hybrid": {
+      "recall_at_5": 77.78,
+      "recall_at_8": 83.33,
+      "precision_at_5": 24.44,
+      "precision_at_8": 16.67,
+      "mrr": 0.6746,
+      "avg_latency_ms": 94.6,
+      "hits_at_5": 14,
+      "hits_at_8": 15,
+      "total_evaluable": 18
+    }
+  },
+  "per_query_results": [
+    {
+      "case_id": "TC_RET_01",
+      "language": "en",
+      "category": "DAMAGED_PRODUCT",
+      "query": "I received a physically damaged air conditioner, what are my legal rights against the seller?",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_10",
+        "CPA_2019_SECTION_39",
+        "CPA_2019_SECTION_84"
+      ],
+      "semantic_rank": null,
+      "bm25_rank": 4,
+      "hybrid_rank": 7,
+      "hybrid_hit_at_5": false,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision retrieved in top-8 at rank #7 (missed top-5).",
+      "top_hybrid_retrieved_parent": "CPA_2019_SECTION_83",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_02",
+      "language": "en",
+      "category": "DEFECTIVE_GOODS",
+      "query": "My newly purchased laptop stopped working after 3 days and has a motherboard defect.",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_10",
+        "CPA_2019_SECTION_39"
+      ],
+      "semantic_rank": 3,
+      "bm25_rank": 3,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CPA_2019_SECTION_2_CLAUSE_10",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_03",
+      "language": "en",
+      "category": "MISSING_ONLINE_ORDER",
+      "query": "I ordered clothes on an online shopping app but they never delivered the package.",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_11",
+        "CP_ECOMMERCE_RULES_2020_RULE_4",
+        "CP_ECOMMERCE_RULES_2020_RULE_6"
+      ],
+      "semantic_rank": 2,
+      "bm25_rank": 2,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CP_ECOMMERCE_RULES_2020_RULE_6",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_04",
+      "language": "en",
+      "category": "WRONG_PRODUCT_DELIVERED",
+      "query": "The e-commerce seller sent the wrong model of washing machine and is refusing to accept the return.",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_47",
+        "CPA_2019_SECTION_39",
+        "CP_ECOMMERCE_RULES_2020_RULE_6"
+      ],
+      "semantic_rank": 1,
+      "bm25_rank": 1,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CP_ECOMMERCE_RULES_2020_RULE_6",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_05",
+      "language": "en",
+      "category": "REFUND_NOT_RECEIVED",
+      "query": "Cancelled my flight booking but the online travel agency has not refunded my money for 2 months.",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_11",
+        "CPA_2019_SECTION_39",
+        "CP_ECOMMERCE_RULES_2020_RULE_6"
+      ],
+      "semantic_rank": null,
+      "bm25_rank": null,
+      "hybrid_rank": null,
+      "hybrid_hit_at_5": false,
+      "hybrid_hit_at_8": false,
+      "explanation": "False negative: Target provision not found in top-8 candidates.",
+      "top_hybrid_retrieved_parent": "CP_ECOMMERCE_RULES_2020_RULE_7",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_06",
+      "language": "en",
+      "category": "SELLER_REFUSING_REPLACEMENT",
+      "query": "Seller refuses to replace a malfunctioning refrigerator claiming no-return policy.",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_47",
+        "CPA_2019_SECTION_39",
+        "CP_ECOMMERCE_RULES_2020_RULE_6"
+      ],
+      "semantic_rank": 2,
+      "bm25_rank": 2,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CP_ECOMMERCE_RULES_2020_RULE_6",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_07",
+      "language": "en",
+      "category": "SERVICE_DEFICIENCY",
+      "query": "Internet service provider disconnected my connection without notice and refused to restore it.",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_11",
+        "CPA_2019_SECTION_2_CLAUSE_42"
+      ],
+      "semantic_rank": 7,
+      "bm25_rank": 7,
+      "hybrid_rank": null,
+      "hybrid_hit_at_5": false,
+      "hybrid_hit_at_8": false,
+      "explanation": "False negative: Target provision not found in top-8 candidates.",
+      "top_hybrid_retrieved_parent": "CPA_2019_SECTION_65",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_08",
+      "language": "en",
+      "category": "UNFAIR_TRADE_PRACTICE",
+      "query": "Company posted fake misleading advertisements claiming their product cures diabetes in 7 days.",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_21",
+        "CPA_2019_SECTION_2_CLAUSE_28",
+        "CPA_2019_SECTION_2_CLAUSE_47"
+      ],
+      "semantic_rank": 1,
+      "bm25_rank": 1,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CPA_2019_SECTION_2_CLAUSE_28",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_09",
+      "language": "en",
+      "category": "COMPLAINT_ELIGIBILITY",
+      "query": "Who is eligible to be considered a consumer and file a complaint under the Consumer Protection Act?",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_5",
+        "CPA_2019_SECTION_2_CLAUSE_7"
+      ],
+      "semantic_rank": 6,
+      "bm25_rank": 2,
+      "hybrid_rank": 4,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #4 in top-5.",
+      "top_hybrid_retrieved_parent": "CPA_2019_SECTION_17",
+      "top_hybrid_methods": [
+        "SEMANTIC"
+      ]
+    },
+    {
+      "case_id": "TC_RET_10",
+      "language": "en",
+      "category": "COMMISSION_JURISDICTION",
+      "query": "What is the pecuniary jurisdiction limit for filing a dispute in the District Consumer Commission?",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_34",
+        "CP_JURISDICTION_RULES_2021_RULE_3"
+      ],
+      "semantic_rank": 1,
+      "bm25_rank": 1,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CPA_2019_SECTION_34",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_11",
+      "language": "en",
+      "category": "EJAGRITI_FILING_PROCESS",
+      "query": "How do I register and file a consumer complaint online using the e-Jagriti portal?",
+      "expected_parent_provisions": [
+        "EJAGRITI_GUIDE_PAGE_1",
+        "EJAGRITI_GUIDE_PAGE_2"
+      ],
+      "semantic_rank": 3,
+      "bm25_rank": 1,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "EJAGRITI_GUIDE_PAGE_2",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_12",
+      "language": "en",
+      "category": "EJAGRITI_REQUIRED_DOCUMENTS",
+      "query": "What documents and fees receipt do I need to upload while submitting a complaint on e-Jagriti?",
+      "expected_parent_provisions": [
+        "EJAGRITI_GUIDE_PAGE_3",
+        "EJAGRITI_GUIDE_PAGE_4",
+        "EJAGRITI_GUIDE_PAGE_5"
+      ],
+      "semantic_rank": 2,
+      "bm25_rank": 2,
+      "hybrid_rank": 2,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #2 in top-5.",
+      "top_hybrid_retrieved_parent": "EJAGRITI_GUIDE_PAGE_10",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_13",
+      "language": "hi",
+      "category": "HINDI_DAMAGED_PRODUCT",
+      "query": "मुझे डिलीवरी में टूटा हुआ सामान मिला है, क्या मुझे नया सामान या पैसे वापस मिलेंगे?",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_10",
+        "CPA_2019_SECTION_39"
+      ],
+      "semantic_rank": 4,
+      "bm25_rank": 2,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CPA_2019_SECTION_39",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_14",
+      "language": "hi",
+      "category": "HINDI_REFUND_QUERY",
+      "query": "दुकानदार पैसे वापस करने से मना कर रहा है, उपभोक्ता फोरम में शिकायत कैसे करें?",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_35",
+        "CPA_2019_SECTION_39"
+      ],
+      "semantic_rank": 5,
+      "bm25_rank": 6,
+      "hybrid_rank": null,
+      "hybrid_hit_at_5": false,
+      "hybrid_hit_at_8": false,
+      "explanation": "False negative: Target provision not found in top-8 candidates.",
+      "top_hybrid_retrieved_parent": "CP_ECOMMERCE_RULES_2020_RULE_6",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_15",
+      "language": "hinglish",
+      "category": "HINGLISH_ECOMMERCE_QUERY",
+      "query": "Online shopping site se defective phone deliver hua hai aur return request cancel kar di.",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_2_CLAUSE_10",
+        "CPA_2019_SECTION_39",
+        "CP_ECOMMERCE_RULES_2020_RULE_6"
+      ],
+      "semantic_rank": 2,
+      "bm25_rank": null,
+      "hybrid_rank": 4,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #4 in top-5.",
+      "top_hybrid_retrieved_parent": "CP_ECOMMERCE_RULES_2020_RULE_7",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_16",
+      "language": "en",
+      "category": "EXACT_SECTION_CITATION",
+      "query": "Section 35 of the Consumer Protection Act 2019 manner in which complaint shall be made",
+      "expected_parent_provisions": [
+        "CPA_2019_SECTION_35"
+      ],
+      "semantic_rank": 1,
+      "bm25_rank": 1,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CPA_2019_SECTION_35",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_17",
+      "language": "en",
+      "category": "EXACT_RULE_CITATION",
+      "query": "Rule 5 of the Consumer Protection E-Commerce Rules liabilities of marketplace e-commerce entities",
+      "expected_parent_provisions": [
+        "CP_ECOMMERCE_RULES_2020_RULE_5"
+      ],
+      "semantic_rank": 1,
+      "bm25_rank": 1,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CP_ECOMMERCE_RULES_2020_RULE_5",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    },
+    {
+      "case_id": "TC_RET_18",
+      "language": "en",
+      "category": "FUTURE_AMENDMENT_QUERY",
+      "query": "What are the new rules for e-commerce entities coming into effect from January 2027?",
+      "expected_parent_provisions": [
+        "CP_ECOMMERCE_AMENDMENT_2026_ITEM_1",
+        "CP_ECOMMERCE_AMENDMENT_2026_ITEM_2"
+      ],
+      "semantic_rank": 1,
+      "bm25_rank": 1,
+      "hybrid_rank": 1,
+      "hybrid_hit_at_5": true,
+      "hybrid_hit_at_8": true,
+      "explanation": "Target provision ranked #1 by hybrid fusion.",
+      "top_hybrid_retrieved_parent": "CP_ECOMMERCE_AMENDMENT_2026_ITEM_1",
+      "top_hybrid_methods": [
+        "SEMANTIC",
+        "BM25"
+      ]
+    }
+  ],
+  "negative_control_results": [
+    {
+      "case_id": "TC_RET_19",
+      "category": "IRRELEVANT_QUERY",
+      "query": "How do I draft a residential rental lease agreement for my tenant in Mumbai?",
+      "raw_retrieved_count": 5,
+      "top_returned_provision": "CPA_2019_SECTION_80",
+      "top_rrf_score": 0.032787,
+      "classifier_gated": true,
+      "notes": "Direct vector search produces nearest lexical/semantic items; production pipeline gates via classifier."
+    },
+    {
+      "case_id": "TC_RET_20",
+      "category": "INSUFFICIENT_COVERAGE",
+      "query": "What are the legal compliance regulations for launching a cryptocurrency exchange and token wallet in India?",
+      "raw_retrieved_count": 5,
+      "top_returned_provision": "CP_ECOMMERCE_RULES_2020_RULE_4",
+      "top_rrf_score": 0.031545,
+      "classifier_gated": true,
+      "notes": "Direct vector search produces nearest lexical/semantic items; production pipeline gates via classifier."
+    }
+  ]
+}

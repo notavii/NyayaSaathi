@@ -1,0 +1,82 @@
+{
+  "manifest_version": "1.1.0",
+  "build_status": "SUCCESS",
+  "created_at_utc": "2026-11-09T10:06:30.115260+00:00",
+  "embedding_model": {
+    "model_id": "intfloat/multilingual-e5-small",
+    "embedding_dimension": 384,
+    "max_sequence_length": 512,
+    "execution_device": "cpu",
+    "passage_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "normalization": "L2_NORM"
+  },
+  "source_dataset": {
+    "canonical_file_path": "data\\legal_sources\\legal_chunks.json",
+    "canonical_sha256": "cf7a13b5ac0dc9fcfd34f78163d88fe5e3f2bdaa7212cc0b70c1f42ab3a37546",
+    "total_canonical_chunks": 206,
+    "eligible_canonical_chunks": 206
+  },
+  "derived_dataset": {
+    "derived_file_path": "data\\legal_sources\\embedding_records.json",
+    "derived_sha256": "ab8dbe3a083017ac82d26b2bac800c8cc47e85b3dbd447d801aee9243a874d8c",
+    "total_derived_records": 251,
+    "overlength_source_chunks_split": 25,
+    "generated_child_records": 70
+  },
+  "collections": {
+    "nyaya_saathi_current_law": {
+      "record_count": 232,
+      "expected_count": 232,
+      "stale_records_pruned": 0,
+      "document_types": [
+        "CENTRAL_ACT",
+        "ACT",
+        "RULES",
+        "CORRIGENDUM",
+        "AMENDMENT_RULES"
+      ],
+      "applicability_status": "CURRENTLY_IN_FORCE"
+    },
+    "nyaya_saathi_procedural_guidance": {
+      "record_count": 13,
+      "expected_count": 13,
+      "stale_records_pruned": 0,
+      "document_types": [
+        "PROCEDURAL_GUIDE",
+        "PROCEDURAL_GUIDANCE"
+      ],
+      "applicability_status": "CURRENTLY_IN_FORCE"
+    },
+    "nyaya_saathi_future_law": {
+      "record_count": 6,
+      "expected_count": 6,
+      "stale_records_pruned": 0,
+      "document_types": [
+        "AMENDMENT_RULES"
+      ],
+      "applicability_status": "FUTURE_EFFECTIVE",
+      "effective_from": "2027-01-01"
+    }
+  },
+  "exclusions": {
+    "historical_chunks_count": 74,
+    "historical_source": "CONSUMER_HANDBOOK_2015",
+    "historical_file": "data/legal_sources/historical_reference_chunks.json",
+    "web_only_sources_count": 1,
+    "web_only_source_id": "NCH_GRIEVANCE_GUIDE"
+  },
+  "token_limit_handling": {
+    "max_tokens": 512,
+    "overlength_chunks_count": 25,
+    "generated_child_segments": 70,
+    "handling_strategy": "LEGAL_BOUNDARY_SPLIT_INDEPENDENT_CHILD_EMBEDDINGS",
+    "silent_truncation_prevented": true
+  },
+  "software_versions": {
+    "sentence_transformers": "6.2.0",
+    "chromadb": "1.5.9",
+    "torch": "2.15.0+cpu",
+    "python": "3.12.14"
+  }
+}
